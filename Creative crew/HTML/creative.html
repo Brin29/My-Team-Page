@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Creative crew/CSS/creative.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>My Team Page</title>
+</head>
+<body>
+    <div class="container"> <!--dIV CONTENEDOR PARA LA MAQUETACION DE GRID-->
+        <header class="encabezado"> <!--encabezado maquetar con flexbox sus items-->
+            <div class="title_container"> <!--Un div para el estilar el box model-->
+                <h1 class="title">The creative crew</h1>
+            </div>
+            <div class="titleside_container"> <!--Un div para estilar el box model del titulo y el parrafo-->
+                <h3 class="titleside">WHO WE ARE</h3>
+                <p class="paragraph">We are team of creatively diverse. driven. innovative individuals working in various locations from the world</p>
+            </div>
+        </header> 
+        <main> <!--El contenido principal de la pagina-->
+            <!-- <section> Se debe usar si van a haber encabezados en el html en su lugar usar div -->
+                <div class="photos"> <!--Div para el flexbox-->
+                    <!-- <div class="cargo"> -->
+                        <figure><!--IMPORTANTE en CSS no se pueden añadir pseudoelementos en imagenes porque es un elemento remplazado-->
+                            <img src="/Creative crew/IMG/photo1.png" alt="Bill Mahoney">
+                            <span class="cargo product">PRODUCT OWNER</span><!--Ponerlo al final de la imagen para que quede se puede estilar-->
+                            <span>Bill Mahoney</span>
+                        </figure>
+                    <!-- </div> -->
+                    <div>
+                        <figure>
+                            <img src="/Creative crew/IMG/photo2.png" alt="Saba Cabrera">
+                            <span class="cargo art">ART DIRECTOR</span>
+                            <span>Saba Cabrera</span>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="/Creative crew/IMG/photo3.png" alt="Shae le">
+                            <span class="cargo tech">TECH LEAD</span>
+                            <span>Shae Le</span>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="/Creative crew/IMG/photo4.png" alt="Skylah Lu">
+                            <span class="cargo ux">UX DESIGNER</span>
+                            <span>Skylah Lu</span>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="/Creative crew/IMG/photo5.png" alt="Griff Richards">
+                            <span class="cargo developer">DEVELOPER</span>
+                            <span>Griff Richards</span>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <img src="/Creative crew/IMG/photo6.png" alt="Stan John">
+                            <span class="cargo developer">DEVELOPER</span>
+                            <span>Stan John</span>
+                        </figure>
+                    </div>
+                </div>
+        </main>
+        <footer class="footer"> 
+            <p class="parrafo">created by <a href="https://github.com/Brin29">Breiner Parra</a> - devChallenge</p>
+        </footer>
+    </div>
+</body>
+</html>

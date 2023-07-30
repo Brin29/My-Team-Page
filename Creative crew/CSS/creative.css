@@ -1,0 +1,204 @@
+:root{
+    --bg-text-footer: #BDBDBD;
+    --bg-text-color: #333333;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    /*Libreria de los textos*/
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'PT Serif', serif;
+}
+.container{
+    display:grid;
+    gap:150px;
+    grid-template:"encabezado" .1fr /*Estructura de la pagina*/
+                  "photos" 1fr
+                  "footer" 0.01fr ;
+}
+.encabezado{ 
+    padding:.1px; /*Para evitar el colapso de margenes*/
+    display:flex; /*Para estilar los hijos*/
+    justify-content:space-evenly; /*Separe en espacios*/
+    align-items:center; /*Alinee en vertical los elementos al centro*/
+    height:172px; 
+    /* margin-bottom:80px;  */
+    flex-wrap:nowrap;/*Que todo quede en linea recta*/
+    grid-area:encabezado; /*El grid area*/
+}
+.title_container{
+    width:303px;
+    height:47px;
+}
+.title{
+    font-family: 'PT Serif', serif;
+    font-weight:700; /*El grosor*/
+    font-size:36px; /*El tamaño*/
+    line-height:47.7px; /*Espacio entre lineas*/
+    letter-spacing:-4.5%; /*Separar letras*/
+}
+.titleside_container{
+    width:28%; /*Que tenga un ancho del 28% */
+    align-self:flex-end; /* Lo aline al final como lo considere el*/
+    min-width:302px; /*Desde 302px no se cierre mas */
+}
+.titleside{
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
+    font-size:18px;
+    line-height:27px;
+    margin-bottom:8px;
+}
+.paragraph{
+    font-family: 'Poppins', sans-serif;
+    font-weight:400;
+    font-size:18px;
+    line-height:27px;
+}
+.photos{
+    display:flex;
+    flex-direction:row; /*Que la direccion este en linea recta*/
+    flex-wrap:wrap;/*Si un elemento no cabe en el contenedor lo pondra abajo de otro*/
+    /* CENTRAR EL DIV */
+    align-items:flex-start; /*Aline todo al centro en vertical*/
+    justify-content:space-evenly; 
+    width:91%;
+    margin:0 auto;
+}
+img ~ span:last-child {
+    margin-bottom:140px;
+    width:117px;
+    height:27px;
+    font-family: 'Poppins', sans-serif;
+    font-weight:600;
+    font-size:18px;
+    line-height:27px;
+    display:block; /* Para que me ponga los elementos abajo de la imagen*/
+}
+div  span:first-child{ /*Primer hijo*/
+    /* writing-mode: vertical-lr; */
+    display:flex;
+    flex-direction:column;
+}
+.cargo{
+    position: relative;
+    bottom:255px;
+    line-height:32.9px;
+    /* margin-right:44px; */
+    writing-mode: vertical-lr; /*Este cambia los valores del texto*/
+    font-family: 'PT Serif', serif;
+    font-weight:400;
+    font-size:15px;
+}
+figure{
+    margin-right:44px;
+}
+[src*=photo1]{
+    width:264px;
+    height:383px;
+}
+[src*=photo2], [src*=photo5]{
+    width:238px;
+    height:347px;
+    margin-top:100px;
+    align-self:flex-end;
+}
+.art{
+    bottom:240px;
+}
+[src*=photo3]{
+    width:238px;
+    height:341px ;
+}                                           
+.ux{
+    bottom:245px;
+}
+[src*=photo4]{
+    width:237px;
+    height:341px ;
+}
+[src*=photo6]{
+    width:237px;
+    height:341px;
+}
+.footer{
+    grid-area:footer;
+    display:flex;/*Para que el footer este siempre abajo darle 0.01 al grid*/
+    margin-bottom:17px;
+    justify-content:center;
+}
+.parrafo, .parrafo > a{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:400;
+    font-size:14px;
+    line-height:17.7px;
+    color:var(--bg-text-footer);
+}
+.parrafo > a{
+    font-weight:700;
+}
+@media (max-width:650px) {
+    /*No es necesario darle estructura a la pagina*/
+    .encabezado{
+        flex-direction:column;/*Columnas para que se apilen una sobre otra*/
+        align-items:flex-start;/*Aline todo en el inicio*/
+        margin-left:15px;/*Una separacion del contenido a la derecha*/
+        margin-bottom:35px;
+    }
+    .title_container{
+        margin-top:150px;
+        margin-bottom:35px;
+    }
+    .titleside_container{
+        width:auto; /*Se pegaba a la derecha porque tenia un width del 28%*/
+        /* margin-bottom:170px; */
+    }
+    .cargo{
+        position: relative;/*Relative para que se acomode al contenedor*/
+        bottom:150px;/*Que se mueva arriba del contenedor*/
+        margin-right:11px;/*Espacio para que moviera la otra caja*/
+        font-size:10px;
+        line-height:10px;/*Espacio entre su caja*/
+    }
+    figure{
+        margin-right:0;/*La cascada*/
+    }
+    img ~ span:last-child{
+        margin-bottom:0;/*Cascada*/
+    }
+    [src*=photo1], [src*=photo2], [src*=photo3]{
+        width:156px;
+        height:237px;
+    }
+    [src*=photo2], [src*=photo4], [src*=photo6]{
+        margin-top:120px;
+    }
+    [src*=photo4]{
+        width:154px;
+        height:248px;
+    }
+    .art{
+        margin-bottom:16px;
+    }
+    [src*=photo5]{
+        width:154px;
+        height:261px;
+        margin:0;
+    }
+    .tech{
+        margin-bottom:32px;
+    }
+    .ux{
+        margin-bottom:30px;
+    }
+    .developer{
+        margin-bottom:55px;
+    }
+    [src*=photo6]{
+        width:155px;
+        height:255px;
+    }
+
+}
